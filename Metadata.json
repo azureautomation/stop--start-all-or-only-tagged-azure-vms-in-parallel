@@ -1,0 +1,20 @@
+{
+    "Author": "Farouk Friha",
+    "ContentSize": 7910,
+    "ContentUrl": "https://raw.githubusercontent.com/azureautomation/stop--start-all-or-only-tagged-azure-vms-in-parallel/master/StopStartVMsInParallel.ps1",
+    "DownloadCount": 3042,
+    "Id": "Stop-Start-all-or-only-8a7e11a2",
+    "IsFederated": false,
+    "IsWorkflow": true,
+    "Popularity": 32,
+    "RaterCount": 0,
+    "Rating": 0.0,
+    "ReleaseDate": "2019-5-19T00:00:00",
+    "RunbookKind": 6,
+    "RunbookKindString": "PowerShell Workflow",
+    "Summary": "This PowerShell Workflow Runbook connects to Azure using an Automation Run As account, retrieves the power status of Azure VMs and turns off / on  in parallel those that are turned on / off. You can attach a recurring schedule to this runbook to run it at a specific time.",
+    "Title": "Stop / Start all or only tagged Azure VMs in parallel",
+    "UpdatedDate": "2019-7-30T00:00:00",
+    "Url": "https://github.com/azureautomation/stop--start-all-or-only-tagged-azure-vms-in-parallel",
+    "UserTags": "Microsoft Azure, Powershell, Azure Automation"
+}
