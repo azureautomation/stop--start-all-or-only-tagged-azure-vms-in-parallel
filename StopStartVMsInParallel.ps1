@@ -2,6 +2,9 @@ Workflow StopStartVMsInParallel
 {
     param (
 
+     	[Parameter(Mandatory=$true)]  
+   	[String] $SubscriptionId,
+
         [Parameter(Mandatory=$true)]  
         [String] $Action,
 
@@ -27,6 +30,9 @@ Workflow StopStartVMsInParallel
    
 
         Write-Output "Successfully logged into Azure." 
+
+   	$AzureContext = Set-AzContext -SubscriptionId $SubscriptionId    
+   
     } 
     catch
     {
