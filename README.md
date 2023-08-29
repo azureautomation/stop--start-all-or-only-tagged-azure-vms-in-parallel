@@ -6,20 +6,23 @@
 **DESCRIPTION**
 
 
-This PowerShell Workflow Runbook connects to Azure using an Automation Run As account, retrieves the power status of VMs and turns off / on in parallel those that are turned on / off. You can attach a recurring schedule to this runbook to run it at a specific
+This PowerShell Workflow Runbook connects to Azure using Managed Identity, retrieves the power status of VMs and turns off / on in parallel those that are turned on / off. You can attach a recurring schedule to this runbook to run it at a specific
  time.
 
 
 **REQUIRED**
 
 
-1. An Automation connection asset called AzureRunAsConnection that contains the information for connecting with Azure using a service principal. To use an asset with a different name you can pass the asset name as a input parameter to this runbook.
+1. You have to create a managed identity for your automation account. 
 
 
 2. An Action input parameter value that allows runbook to handle VMs power state. The parameter must be set to 'Stop' or 'Start'.
+   
+
+4.  An Action input parameter value for the Subscription ID of the VMs that you want to Start/Stop.
 
 
-3. All the following PowerShell modules are required to run the cmdlets : Az.Accounts, Az.Resources, Az.Compute and Az.Automation.
+5. All the following PowerShell modules are required to run the cmdlets : Az.Accounts, Az.Resources, Az.Compute and Az.Automation.
 
 
 **OPTIONAL**
@@ -34,19 +37,20 @@ This PowerShell Workflow Runbook connects to Azure using an Automation Run As ac
 **AUTHOR**
 
 
-Farouk FRIHA
+Bhawna Rawat
 
 
 **LAST EDIT**
 
 
-2019-17-05
+28-08-2023
 
 
 **RELEASE NOTES**
 
 
-2019-17-05 First release
+2023-08-28 : Updated runbook with Managed Identity authentication
+
 
 
 **RUNBOOK CONTENT**
